@@ -1,0 +1,91 @@
+
+.#{$prefix}-main-header{
+    .#{$prefix}-menu-button-section{
+        .#{$prefix}-menu-section{
+            position: relative;
+            &:after{
+                @extend %triangle-border;
+                left: -$triangle-width;
+                border-width: 0 0 $nav-triangle-height $triangle-width;
+            }
+            @include media(lg){
+               &:after{
+                   content: '';
+               }
+            }
+            nav{
+                display: none;
+                @include media(lg){
+                    display: initial;  
+                }
+            }
+            ul,div{
+                &.#{$prefix}-nav-menu{
+                    padding-top: 10px;
+                }
+            }
+            ul{
+                &.#{$prefix}-nav-menu{
+                    >li{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            div{
+                &.#{$prefix}-nav-menu{
+                    >ul{
+                        >li{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .#{$prefix}-menu-icon-section{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @include media(lg){
+                display: none;
+            }
+            .#{$prefix}-social-menu-icon{
+                margin: 0 5px;
+                @include media(xs){
+                    margin: 0 15px;
+                }
+            }
+            .#{$prefix}-menu-btn{
+                button{
+                    background-color: $color_black;
+                    font-family: inherit;
+                    color: $color_white;
+                    border: 0;
+                    border-radius: 0;
+                    font-size: 1rem;
+                    padding: 0 20px;
+                    height: 40px;
+                    line-height: 40px;
+                    span{
+                        display: inline-block;
+                        padding: 0 5px;
+                        position: relative;
+                        top: 1px;
+                    }
+
+                }
+            }
+        }
+        .#{$prefix}-btn-section{
+            padding: 5px;
+            font-size: 0.5rem;
+            @include media(xs){
+                padding: 5px 15px;
+                font-size: 1rem;
+            }
+            @include media(lg){
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+    }
+}

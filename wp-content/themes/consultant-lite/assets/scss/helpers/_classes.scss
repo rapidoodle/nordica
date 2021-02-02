@@ -1,0 +1,123 @@
+// grid
+.#{$prefix}-float-left{
+    float: left;
+}
+.#{$prefix}-float-right{
+    float: right;
+}
+.#{$prefix}-text-center{
+    text-align: center;
+}
+.clearfix{
+    &:before,
+    &:after{
+        clear: both;
+        content:'';
+        display: block;
+
+    }
+}
+.#{$prefix}-d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.#{$prefix}-w-100{
+    width: 100%;
+}
+
+.#{$prefix}-text-center{
+    text-align: center;
+}
+.d-block{
+    display: block;
+}
+
+// image
+img{
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+.data-bg,
+.bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    background-color: rgb(123,123,123);
+    position: relative;
+    >a{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+.data-bg-xs{
+    height: 50px;
+    overflow: hidden;
+}
+
+
+// anchor tag
+a{
+    text-decoration: none;
+    color: $color_black;
+    @include transition();
+    &:visited{
+        color: $color_black;
+    }
+    &:hover{
+        color: $color_hover;
+    }
+}
+p{
+    a{
+        color: $color_primary;
+        font-weight: $font_semi_bold;
+        &:visited{
+            color: $color_primary;
+        }
+        &:hover{
+            color: $color_hover;
+        }
+    }
+}
+
+
+// hover Effect
+.#{$prefix}-image-hover{
+    overflow: hidden;
+    a{
+        @include transition(transform,0.3s,linear);
+        @include backface();
+        &:hover{
+            @include transform(scale(1.1,1.1));
+        }
+    }
+}
+.#{$prefix}-overlay{
+    @extend %perspective;
+    @extend %overlay;
+}
+.#{$prefix}-overlay-pattern{
+    @extend %perspective;
+    position: relative;
+    z-index: 1;
+    &:before{
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .5) url(assets/images/overlay-pattern.png) repeat;
+        content: '';
+    }
+}
+

@@ -1,0 +1,70 @@
+.#{$prefix}-main-header{
+    .site-branding{
+        background-color: $color_primary;
+        color: $color_primary_bg_text_color;
+        a{
+            color: $color_primary_bg_text_color;
+            &:visited{
+                color: $color_primary_bg_text_color;
+            }
+            &:hover{
+                color: rgba($color_light_gray,0.7);
+            }
+        }
+        .site-title,p{
+            margin: 0;
+            padding-top: 15px;
+            @include media(lg){
+                padding-top: 5px;
+            }
+        }   
+        .site-title{
+            font-size: 35px;
+        } 
+        .site-description{
+            font-size: 18px;
+            line-height: 1;
+            @include media(lg){
+                font-size: 1rem;
+            }
+        }  
+    }
+    .#{$prefix}-logo-section{ 
+        &.#{$prefix}-site-logo-with-title{
+            .#{$prefix}-logo{
+                padding-top: 15px;
+                max-width: 150px;
+                margin: auto;
+                @include media(lg){
+                    padding-top: 10px;
+                    max-width: 100px;
+                    margin: auto;
+                }
+            }
+        }
+        &.#{$prefix}-site-logo-disable{
+            padding-top: 15px;
+            .site-title,p{
+                @include media(lg){
+                    padding-top: 15px;
+                }
+            }    
+           
+        }
+        &.#{$prefix}-only-logo-enable{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            .#{$prefix}-logo{
+                max-width: 200px;
+                padding-top: 15px;
+                @include media(lg){
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+ 
+}

@@ -1,0 +1,103 @@
+/*
+Theme Name: Consultant Lite
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+
+/*
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+*/
+
+/*********************arrow**********************/
+.ion-md-arrow-forward:before,
+.ion-md-arrow-round-forward:before{
+	content: '\f27d';
+}
+
+
+/*************************title*********************/
+.site-content .widget-title:before,
+.site-content h1:before,
+.site-content h2:before,
+.site-content h3:before,
+.site-content h4:before,
+.site-content h5:before,
+.site-content h6:before{
+	left: initial;
+	right: 0;
+}
+
+/* header */
+
+.tm-main-header .tm-address-with-social-section .tm-address-section:after{
+	border-width: 80px 0 0 45px;
+	border-color: transparent transparent transparent #fff;
+	right: initial;
+	left: 0;
+}
+.tm-main-header .tm-menu-button-section .tm-menu-section:after{
+	border-width: 50px 0 0 45px;
+	border-color: transparent  transparent transparent #fff;
+	left: initial;
+	right: -45px;
+}
+
+
+/* navigation */
+
+.desktop .tm-nav-menu ul .right-arrow > a:after{
+	right: initial;
+	left: 20px;
+	content: '\f3cf';
+
+}
+.desktop .tm-nav-menu > ul > li .children > li .children,
+.desktop ul.tm-nav-menu > li .sub-menu > li .sub-menu{
+	left: initial;
+	right: 100%;
+}
+
+/*********************single page**********************/
+.wp-block-image .alignleft{
+	float: initial;
+}
+.tm-comments-section .comment-list li .comment-content p:before,
+.tm-comments-section .comment-list li .comment-meta .comment-metadata .edit-link:before, 
+.tm-comments-section .comment-list li .comment-meta .comment-metadata time:before{
+	left: initial;
+	right: 0;
+}
+.tm-comments-section .comment-list li .comment-content p{
+	padding-right: 20px;
+}
+.widget_recent_entries li{
+	padding-left: 0;
+	padding-right: 20px;
+}
+.widget_recent_entries li:before{
+	left: initial;
+	right: 0;
+	content: '\f3cf';
+}
+/******************TESTIMONIAL*************/
+.tm-testimonial-section .tm-testimonial .tm-desc .tm-icon-section .tm-wrapper{
+	left: initial;
+	right: 0;
+	transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+}
+
+/**************** BLOG *************/
+.tm-blog-section .tm-blog .tm-image-section .tm-date{
+	left: initial;
+	right: 0;
+}

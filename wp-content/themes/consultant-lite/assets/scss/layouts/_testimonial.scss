@@ -1,0 +1,33 @@
+.#{$prefix}-testimonial-section{
+    padding: 15px 0 45px;
+    color: $color_white;
+    position: relative;
+    overflow: hidden;
+    .#{$prefix}-bg-image-section{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        @include animation( kenburns-top 20s ease-out infinite both );
+        background-attachment: fixed;
+        z-index: -1;
+    }
+  
+    .#{$prefix}-section-title{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .slick-dots{
+        padding-top: 15px;
+        button{
+            background-color: $color_white;
+        }
+    }
+    .#{$prefix}-testimonial-slider{
+        @include media(lg){
+            width: 800px;
+            margin: auto;
+        }
+    }
+}

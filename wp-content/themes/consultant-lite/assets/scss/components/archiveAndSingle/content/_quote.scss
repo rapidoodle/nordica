@@ -1,0 +1,41 @@
+.#{$prefix}-article-post{
+    blockquote{
+        &.wp-block-quote{
+            padding: 15px;
+            margin: 15px 0 0;
+        }
+            padding: 15px;
+            background-color: $color_blue_gray;
+            margin: 15px 0 0;
+            font-weight: $font_semi_bold;
+            p{
+                padding: 15px 30px;
+                position: relative;
+                &:before,
+                &:after{
+                    position: absolute;
+                    font-size: 1rem;
+                    @extend %ionicons;
+                    color: $color_primary;
+                    content: "\f35f";
+        
+                }
+                &:before{
+                    left: 0;
+                    top: 0;
+                    @include transform(rotate(180deg));
+                }
+                &:after{
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        cite{
+            display: flex;
+            justify-content: flex-end;
+            color: $color_gray;
+        }
+       
+    
+}

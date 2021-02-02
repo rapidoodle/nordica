@@ -1,0 +1,214 @@
+.container-fluid,
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+}
+.container{
+    @include media(lg){
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @include media(bigScreen){
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.clearfix{
+    @extend %clearfix;
+}
+.#{$prefix}-d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.#{$prefix}-w-100{
+    display: block;
+    width: 100%;
+}
+.#{$prefix}-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.#{$prefix}-col-12,
+.#{$prefix}-col-md-6{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+.#{$prefix}-col-3,
+.#{$prefix}-col-4,
+.#{$prefix}-col-6,
+.#{$prefix}-col-8,
+.#{$prefix}-col-9{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include media(sm){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.#{$prefix}-col-3{
+    @include media(lg){
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+.#{$prefix}-col-4{
+    @include media(lg){
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+.#{$prefix}-col-6{
+    @include media(lg){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.#{$prefix}-col-8{
+    @include media(lg){      
+        flex: 0 0 66.67%;
+        max-width: 66.67%;
+    }
+} 
+.#{$prefix}-col-9{
+    @include media(lg){
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+.#{$prefix}-col-12{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+// md
+
+.#{$prefix}-col-md-12{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    @include media(md){
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.#{$prefix}-col-md-6{
+    @include media(md){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+// lg
+.#{$prefix}-col-lg-3{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    @include media(lg){
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+.#{$prefix}-col-lg-6{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    @include media(lg){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.#{$prefix}-col-lg-9{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    @include media(lg){
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+.#{$prefix}-col-half{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    @include media(sm){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.#{$prefix}-no-space{
+    padding-left: 0;
+    padding-right: 0;
+}
+#content{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    @include media(lg){
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @include media(bigScreen){
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  #primary,
+  #secondary{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+   #primary{
+       @include media(lg){
+        padding-right: 15px;
+           flex: 0 0 70%;
+           max-width: 70%;
+       }
+   }
+   #secondary{
+       @include media(lg){
+        padding-left: 15px;
+           flex: 0 0 30%;
+           max-width: 30%;
+       }
+      
+   }
+}
+
+.left-sidebar{
+    #content{
+        #primary{
+            order: 2;
+            @include media(lg){
+                padding-left: 15px;
+            }
+        }
+        #secondary{
+            order: 1;
+            @include media(lg){
+                padding-right: 15px;
+            } 
+           
+        }
+    }
+}
+.no-sidebar{
+    #content{
+        #primary{
+            @include media(lg){
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        #secondary{
+          display: none;
+        }
+    }
+}

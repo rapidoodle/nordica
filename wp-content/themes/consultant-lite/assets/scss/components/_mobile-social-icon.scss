@@ -1,0 +1,23 @@
+.#{$prefix}-mobile-menu{
+    .#{$prefix}-address-section{
+        flex-direction: column;
+        .#{$prefix}-address,
+        .#{$prefix}-telephone,
+        .#{$prefix}-email{
+            text-align: center;
+            h5{
+               margin: 10px 0;
+            }
+        }
+
+    }
+    .#{$prefix}-social-section{
+        .#{$prefix}-social-icons{
+            justify-content: center;
+            li{
+                margin-top: 10px;
+            }
+        }
+    }
+       
+}

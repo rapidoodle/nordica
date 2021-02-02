@@ -1,0 +1,14 @@
+.#{$prefix}-article-post{
+    .wp-block-gallery{
+        margin: 0;
+        padding-top: $article-post-spacing-sm;
+        li{
+            figcaption{
+              font-size: 1rem;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@include keyframes( kenburns-top ){
+    0% {
+        @include transform( scale(1) translateY(0) );
+        @include transformOrigin( 50% 16%);
+    }
+    100% {
+        @include transform( scale(1.25) translateY(-15px) );
+        @include transformOrigin( top );
+    }
+}
+ 
+
+@include keyframes ( slide-in-fwd-top ) {
+    0% {
+        @include transform( translateZ(-1400px) translateY(-800px) );
+        opacity: 0;
+    }
+    100% {
+        @include transform( translateZ(0) translateY(0));
+        opacity: 1;
+    }
+}
+ 
+
+@include keyframes ( slide-in-fwd-bottom ){
+    0% {
+        @include transform( translateZ(-1400px) translateY(800px));
+        opacity: 0;
+    }
+    100% {
+        @include transform( translateZ(0) translateY(0) );
+        opacity: 1;
+    }
+}
+  

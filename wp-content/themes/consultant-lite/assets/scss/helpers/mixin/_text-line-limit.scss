@@ -1,0 +1,9 @@
+@mixin line-limit($limit:2){
+    line-clamp: $limit;
+    -webkit-line-clamp: $limit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}

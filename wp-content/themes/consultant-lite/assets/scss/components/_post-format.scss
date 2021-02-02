@@ -1,0 +1,22 @@
+$default-size: 60px;
+.#{$prefix}-post-format{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%,-50%));
+    @include border(2px,solid);
+    border-color: $color_white;
+    border-radius: 100%;
+    height: $default-size;
+    width: $default-size;
+    line-height: 56px;
+    font-size: 2.5rem;
+    color: $color_white;
+    text-align: center;
+    cursor: pointer;
+    @include transition();
+    &:hover{
+        background-color: $color_light_gray;
+        color: $color_primary;
+    }
+}

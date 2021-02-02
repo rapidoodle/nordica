@@ -1,0 +1,30 @@
+.comment-form{
+    textarea,input[type=text],input[type=email],input[type=url]{
+        width: 100%;
+        @include border();
+        border-color: $color_blue_gray;
+        padding: 10px 15px;
+    }
+    
+    
+    input[type=submit]{
+        @extend %comment-btn;
+        background-color: $color_primary;
+        @include transition();
+        width: 100%;
+        text-align: center;
+        border: 0;
+        &:hover{
+            background-color: $color_hover;    
+        }
+        @include media(sm){
+            margin-right: 10px;
+            width: initial;
+        }
+    }
+    
+    .comment-form-cookies-consent{
+        display: flex;
+        align-items: center;
+    }
+}   

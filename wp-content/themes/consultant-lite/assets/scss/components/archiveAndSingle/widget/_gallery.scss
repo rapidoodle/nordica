@@ -1,0 +1,21 @@
+.gallery{
+    margin-top: 0;
+    margin-bottom: 0;
+    .gallery-icon{
+        text-align: center;
+        a{
+            display: inline-block;
+        }
+    }
+}
+.widget{
+    .gallery{
+        figure{
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+        figcaption{
+            display: none;
+        }
+    }
+}

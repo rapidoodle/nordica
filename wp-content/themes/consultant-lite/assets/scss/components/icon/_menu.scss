@@ -1,0 +1,90 @@
+$menu_icon_height : 2px;
+$social_menu_icon_height : 3px;
+$menu_icon_width: 40px;
+.#{$prefix}-menu-icon{
+    position: relative;
+    height: 20px;
+    width: $menu_icon_width;
+    cursor: pointer;
+    @include transition;
+    button{
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }
+    &:before{
+        position: absolute;
+        display: block;
+        content: "";
+        height: $menu_icon_height;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $color_black;
+    }
+    span{
+        &:before,
+        &:after{
+            position: absolute;
+            display: block;
+            content: "";
+            height: $menu_icon_height;
+            left: 0;
+            background-color: $color_black;
+            width: 100%;
+        }
+        &:before{
+            top: 1px;
+    
+        }
+        &:after{
+            bottom: 1px;
+        }
+    }
+
+}
+.#{$prefix}-social-menu-icon{
+    position: relative;
+    height: 20px;
+    width: $menu_icon_width;
+    cursor: pointer;
+    @include transition;
+    button{
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }
+    &:before{
+        position: absolute;
+        display: block;
+        content: "";
+        height: $social_menu_icon_height;
+        width: 80%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $color_black;
+    }
+    span{
+        &:before,
+        &:after{
+            position: absolute;
+            display: block;
+            content: "";
+            height: $social_menu_icon_height;
+            width: 100%;
+            left: 0;
+            background-color: $color_black;
+        }
+        &:before{
+            top: 1px;
+    
+        }
+        &:after{
+            bottom: 1px;
+        }
+    }
+   
+
+}

@@ -1,0 +1,35 @@
+.archive{
+    .page-header{
+        background-color: $color_light_gray;
+        padding: 15px 15px 30px;
+        .page-title{
+            margin: 0;
+            padding-top: 10px;
+        }
+        p{
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+    }
+    .#{$prefix}-article-post{
+        @extend %box-shadow-md;
+        padding: 15px 15px 0;
+    }
+}
+.#{$prefix}-article-content-wrapper{
+    .#{$prefix}-post-thumbnail,
+    .entry-content{
+        flex: 0 0 100%;
+        max-width: 100%;
+        @include media(sm){
+                flex: 0 0 50%;
+                max-width: 50%;
+        }
+    } 
+    .entry-content{
+        margin-top: 30px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+}

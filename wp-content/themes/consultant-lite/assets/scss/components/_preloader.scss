@@ -1,0 +1,43 @@
+$preloader_size: 2em;
+$prelaoder_duration: 2.5s;
+$preloader_bg_color: rgba(255,255,255,1);
+
+
+@include keyframes( preloader ){
+    0%,50%{
+        @include transform(scale(0));
+    }
+}
+.#{$prefix}-preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: $color_white;
+   .status{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+   }
+}
+.#{$prefix}-dot {	
+	background-color: $color_primary;
+	
+	&, &:after {
+		display: inline-block;
+        width: $preloader_size; 
+        height: $preloader_size;
+        border-radius: 50%;
+        @include animation( preloader $prelaoder_duration calc(((var(--i) + var(--o, 0))/var(--n) - 1)*#{$prelaoder_duration}) infinite );
+	}
+	
+	&:after {
+		--o: 1;
+		background-color: $preloader_bg_color;
+		content: '';
+	}
+}
+

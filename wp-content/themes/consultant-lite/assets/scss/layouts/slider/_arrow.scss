@@ -1,0 +1,40 @@
+.slick-arrow{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    @extend %primary-bg;
+    border: 0;
+    z-index: 1;
+    font-size: 0;
+    cursor: pointer;
+    outline: 0;
+    @include transition();
+    color: $color_white;
+    @include transition();
+    &.slick-disabled{
+        z-index: -1;
+        opacity: 0;
+    }
+    &:before{
+        font-size: 1.5rem;
+        @extend %ionicons;
+    }
+    &:hover{
+        background-color: $color_hover;
+    }
+}
+.slick-prev{
+    left: 10px;
+    &:before{
+        content: '\f27d';
+
+    }
+}
+.slick-next{
+    right: 10px;
+    &:before{
+        content: '\f287';
+    }
+}

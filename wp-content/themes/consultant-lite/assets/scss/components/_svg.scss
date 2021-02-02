@@ -1,0 +1,40 @@
+.#{$prefix}-svg{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    @include media(sm){
+        display: block;
+    }
+}
+.#{$prefix}-svg-multiple-layer{
+    height: 90px;
+    bottom: 0; 
+    color: $color_white;
+    svg{
+        height: 100px;
+        width: 100%; 
+    }
+    .#{$prefix}-layer-1{
+        fill: rgba($color_light_gray, 0.15)
+    }
+    .#{$prefix}-layer-2{
+        fill: rgba($color_blue_gray, 0.3);
+    }
+    .#{$prefix}-layer-3{
+        fill: currentColor;
+    }
+  
+}
+
+.#{$prefix}-svg-single-layer{
+    bottom: -1px;
+    height: auto;
+    .#{$prefix}-layer-1{
+        fill: rgba($color_white,0.4);
+    }
+    .#{$prefix}-layer-2{
+        fill: $color_white;
+    }
+}

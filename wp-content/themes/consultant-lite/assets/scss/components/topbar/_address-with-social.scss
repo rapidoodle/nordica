@@ -1,0 +1,61 @@
+.#{$prefix}-main-header{
+  
+    .#{$prefix}-address-section{
+        background-color: $color_primary;
+        justify-content: center;
+        color: $color_primary_bg_text_color;
+        height: 80px;
+        padding: 5px;
+        position: relative;
+        flex-direction: row;
+        &:after{
+            @extend %triangle-border;
+            right: 0; 
+            border-width: 0 0 $site-feature-triangle-height $triangle-width;
+        }
+        @include media(lg){
+            &:after{
+                content: '';
+            }
+        }
+        a{
+            color: $color_primary_bg_text_color;
+            &:visited{
+                color: $color_primary_bg_text_color;
+            }
+            &:hover{
+                color: rgba($color_light_gray,0.7);
+            }
+        }
+        .#{$prefix}-address,
+        .#{$prefix}-telephone,
+        .#{$prefix}-email{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+            .#{$prefix}-icon-section{
+                flex: 0 0 40px;
+                max-width: 40px;
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+            .#{$prefix}-desc{
+                flex: 0 0 calc( 100% - 40px );
+                max-width: calc( 100% - 40px);
+                .icon-box-title{
+                    margin: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .#{$prefix}-social-icons{
+        height: $site-feature-triangle-height;
+        align-items: center;
+    }
+    
+}  

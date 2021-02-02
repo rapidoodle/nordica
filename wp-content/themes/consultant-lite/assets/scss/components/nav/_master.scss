@@ -1,0 +1,36 @@
+
+@import 'config';
+@import 'first-level';
+@import 'second-level';
+@import 'third-level';
+@import 'fourth-level';
+.desktop{
+    .#{$prefix}-nav-menu{
+        a{
+            font-size: 13px;
+            font-weight: $font_semi_bold;
+        }
+    }
+}
+.desktop ul{
+    @extend %reset-ul;
+}
+.desktop .#{$prefix}-nav-menu li.down-arrow>a{
+    padding-right: 30px;
+}
+.desktop .down-arrow>a:after,
+.desktop .right-arrow>a:after{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    @extend %ionicons;
+    font-size: 20px;
+}
+.desktop .down-arrow>a:after{
+    content: '\f3d0';
+}
+.desktop .right-arrow>a:after{
+    content: '\f3d1';
+}

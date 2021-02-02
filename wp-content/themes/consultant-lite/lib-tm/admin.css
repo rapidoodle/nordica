@@ -1,0 +1,31 @@
+.cl-form-group input,
+.cl-form-group input[type="text"],
+.cl-form-group input[type="url"],
+.cl-form-group input[type="number"]{
+    border-radius: 0;
+    padding: 5px 15px;
+    width: 100%;
+    border: 1px solid #eee;
+}
+.cl-custom-meta-box-title{
+    font-weight: 600;
+    font-size: 18px;
+}
+.cl-form-group label{
+    font-weight: 600;
+    font-size: 14px;
+}
+.cl-form-group{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    align-items: center;
+}
+.cl-form-group .cl-label{
+    flex: 0 0 250px;
+    max-width: 250px;
+}
+.cl-form-group .cl-form-control{
+    flex: 0 0 calc(100% - 250px);
+    max-width: calc(100% - 250px);
+}

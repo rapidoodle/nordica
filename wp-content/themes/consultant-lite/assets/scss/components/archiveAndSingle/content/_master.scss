@@ -1,0 +1,14 @@
+$article-post-spacing: 30px;
+$article-post-spacing-sm: 15px;
+@import 'header';
+@import 'gallery';
+@import 'preformatted';
+@import 'list';
+@import 'post';
+@import 'quote';
+.#{$prefix}-article-post-list{
+    .#{$prefix}-article-post{
+        box-shadow: 0 0 4px 4px $color_light_gray;
+        padding: 15px 15px 0;
+    }
+}

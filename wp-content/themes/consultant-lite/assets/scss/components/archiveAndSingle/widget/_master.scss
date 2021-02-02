@@ -1,0 +1,43 @@
+@import 'calendar';
+@import 'list';
+@import 'tag';
+@import 'search';
+@import 'gallery';
+@import 'recent-post';
+.widget-area{
+    section{
+        padding: 0 15px 15px;
+        background: $color_light_gray;
+    }
+   
+}
+.widget{
+    .widget-title{
+        margin: 0;
+        padding-top: 15px;
+    }
+    .wp-video,
+    select{
+        margin-top: 15px;
+    }
+    .search-form{
+        padding-top: 15px;
+    }
+
+    figure,
+    .wp-caption{
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+    p{
+        img{
+            margin-top: 15px;
+        }
+    }
+    select{
+        padding: 10px 15px;
+        font-family: inherit;
+        width: 100%;
+    }
+   
+}

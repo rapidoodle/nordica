@@ -1,0 +1,95 @@
+$triangle-width: 45px;
+$nav-triangle-height: 50px;
+$site-feature-triangle-height: 80px;
+$header-height: 130px;
+%triangle-border{
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: 0;
+    border-color: transparent transparent $color_white transparent;
+    
+}
+@import 'menu-section-with-button';
+@import 'address-with-social';
+@import 'site-branding';
+@import 'sticky';
+.logged-in{
+    .#{$prefix}-main-header{
+       &.sticky {
+          .#{$prefix}-menu-button-section{
+              top: 30px;
+          }
+       }
+    }
+    .#{$prefix}-offcanvas-close-icon{
+       .sidr-class-sidr-button-close{
+          margin-top: 20px;
+       }
+    }
+ }
+.home{
+    .#{$prefix}-main-header{
+        border-bottom: 0;
+    }
+}
+.#{$prefix}-main-header{
+    @include border-bottom();
+    border-color: rgba($color_blue_gray,0.25); 
+    .site-branding{
+        overflow: hidden;
+        flex: 0 0 100%;
+        max-width:  100%;
+        padding-bottom: 30px;
+        text-align: center;
+        @include media(lg){
+            padding: 0 30px;
+            height: $header-height;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+       
+    }
+   
+    .#{$prefix}-site-features{
+        flex: 0 0 100%;
+        max-width: 100%;
+       
+        @include media(lg){
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+    .#{$prefix}-address-with-social-section,
+    .#{$prefix}-menu-button-section{
+        .#{$prefix}-address-section,
+        .#{$prefix}-menu-section{
+           @include media(lg){
+            flex: 0 0 75%;
+            max-width: 75%;
+           }
+        }
+        .#{$prefix}-social-section,
+        .#{$prefix}-btn-section{
+            @include media(lg){
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    }
+    .#{$prefix}-menu-button-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .#{$prefix}-address-with-social-section{
+        display: none;
+        @include media(lg){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+}

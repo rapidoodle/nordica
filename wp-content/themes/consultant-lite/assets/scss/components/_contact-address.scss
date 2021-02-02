@@ -1,0 +1,19 @@
+.#{$prefix}-contact-address-section{
+    .#{$prefix}-address,
+    .#{$prefix}-telephone,
+    .#{$prefix}-email{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        .#{$prefix}-icon-section{
+            padding: 0 10px;
+            i{
+                font-size: 1.5rem;
+            }
+        }
+       
+    }
+}

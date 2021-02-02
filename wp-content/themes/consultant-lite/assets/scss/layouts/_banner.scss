@@ -1,0 +1,101 @@
+  
+ .#{$prefix}-banner-section{
+    position: relative;
+ } 
+.#{$prefix}-banner-slider-section{
+   
+    .slick-arrow{
+        display: none !important;
+        @include media(lg){
+            background-color: transparent;
+            display: initial !important;
+        }
+        &:before{
+            @include media(lg){
+                color: $color_white;
+            }
+        }
+        &:hover{
+            background-color: transparent;
+            &:before{
+                color: $color_primary;
+            }
+        }
+    }
+    .slick-dots{
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        @include media(sm){
+            padding-bottom: 100px;
+        }
+        @include transform(translateX(-50%));
+        @include media(lg){
+            display: none !important;
+        }
+    }
+    .#{$prefix}-banner-slider{
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        color: $color_white;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 100px;
+        @include media(sm){
+            height: 600px;
+            padding-bottom: 30px;
+
+        }
+        .#{$prefix}-image-section{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+    
+        }
+        .#{$prefix}-wrapper{
+            z-index: 2;
+            padding-left: 45px;
+            padding-right: 45px;
+            @include media(lg){
+                max-width: 50%;
+                padding-left: 100px;
+            }
+        }
+     
+        .#{$prefix}-post-title,
+        p{
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        .#{$prefix}-section-title{
+            @include line-limit();
+        }
+    }
+    
+    .#{$prefix}-banner-slider-wrapper{
+        &.slick-active{
+            .#{$prefix}-banner-slider{
+                .#{$prefix}-image-section{
+                    @include animation( kenburns-top 20s ease-out infinite both );
+                }
+                .#{$prefix}-section-title{
+                    @include animation( slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both) ;
+                }
+                p{
+                    @include animation( slide-in-fwd-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both );
+                }
+                .#{$prefix}-btn-section{
+                    @include animation( slide-in-fwd-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both );
+                }
+            }
+        }
+    }
+}
+
+
+  
+ 

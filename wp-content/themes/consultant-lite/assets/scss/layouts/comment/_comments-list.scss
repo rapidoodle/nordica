@@ -1,0 +1,82 @@
+%comment-common-icon{
+    display: block;
+    position: absolute;
+    left: 0;
+    color: $color_black;
+    top: 0;
+}
+.#{$prefix}-comments-section{
+    .comment-list{
+        @extend %reset-ul;
+        >li{
+            padding-bottom: 30px;
+            @include border-bottom();
+            border-color: $color_light_gray;
+        }
+
+        li{
+            padding-top: 30px;
+            .comment-reply-link{
+               @include transition();
+            }
+            
+            .comment-meta{
+                @extend %primary-color;
+                .comment-author{
+                    img{
+                        margin-right: 15px;
+                    }
+                }
+                .comment-metadata{
+                    padding-top: 15px;
+                    a,span,time{
+                        display: inline-block;
+                        position: relative;
+                    }
+                    .edit-link,time{
+                        padding-left: 25px;
+                        padding-right: 20px;
+                        &:before{
+                            @extend %comment-common-icon;
+                            @extend %ionicons;
+                        }
+                    }
+                    time{
+                        &:before{
+                            content: '\f3f4';
+                        }
+                    }
+                    .edit-link{
+                        &:before{
+                            content: '\f2db';
+                        }
+                    }
+                }
+            }
+            .comment-content{
+                p{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    padding-left: 20px;
+                    position: relative;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &:before{
+                        @extend %comment-common-icon;
+                        @extend %ionicons;
+                        content: '\f3fa';
+
+                    }
+                }
+            }
+            .reply{
+                padding-top: 15px;
+            }
+        }
+        .children{
+            padding: 0;
+            margin-left: 15px;
+        }
+    }
+}

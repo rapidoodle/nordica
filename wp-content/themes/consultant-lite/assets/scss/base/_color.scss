@@ -1,0 +1,53 @@
+.#{$prefix}-primary-text-color{
+    color: $color_primary;
+    &:visited{
+        color: $color_primary;
+    }
+}
+.#{$prefix}-text-white-color{
+    color: $color_white;
+    &:visited{
+        color: $color_white;
+    }
+}
+.#{$prefix}-text-hover-color{
+    &:hover{
+        color: $color_hover;
+    }
+}
+.#{$prefix}-text-hover-shade-color{
+    &:hover{
+        color: $color_dark_gray;
+    }
+}
+.#{$prefix}-text-shade-color{
+    color: $color_dark_gray;
+}
+
+.#{$prefix}-section-border{
+    @include border-top();
+    border-color: rgba($color_blue_gray,0.25); 
+}
+.#{$prefix}-bg-light-gray,
+.#{$prefix}-section-bg-color{
+    background-color: rgba($color_light_gray,1);
+}
+.#{$prefix}-bg-blue-gray{
+    background-color: rgba($color_blue_gray,1);
+}
+.#{$prefix}-bg-blue-gray-shade{
+    background-color: rgba($color_blue_gray,0.67);
+}
+.#{$prefix}-bg-white{
+    background-color: rgba($color_white,1);
+}
+.#{$prefix}-bg-primary{
+    background-color: $color_primary;
+    color: $color_primary_bg_text_color;
+    a{
+        color: $color_primary_bg_text_color;
+        &:visited{
+            color: $color_primary_bg_text_color;
+        }
+    }
+}

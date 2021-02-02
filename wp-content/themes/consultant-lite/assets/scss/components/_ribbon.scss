@@ -1,0 +1,38 @@
+$ribbon-height: 70px;
+$ribbon-width: 75px;
+$ribbon-border: 37.5px;
+$ribbon-top-border: 30px;
+
+.#{$prefix}-ribbon{
+    height: $ribbon-height;
+    width: $ribbon-width;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $color_white;
+    @extend %primary-bg;
+    position: relative;
+    
+    &:before,
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: -$ribbon-top-border;
+        width: 0;
+        height: 0;
+        @include border-top($ribbon-top-border,solid);
+        border-top-color: $color_primary;
+    }
+    &:before{
+        left: 0;
+        @include border-right($ribbon-border,solid);
+        border-right-color: transparent;
+    }
+    &:after{
+        @include border-left($ribbon-border,solid);
+        border-left-color:transparent;
+        right: 0;
+    }
+}

@@ -1,0 +1,16 @@
+.widget{
+    .tagcloud{
+        a{
+            display: inline-block;
+            font-size: 1rem !important;
+            font-weight: $font_semi_bold;
+            margin: 15px 5px 0;
+            @include border(2px,solid);
+            background-color: $color_blue_gray;
+            border-color: $color_white;
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+    }
+    
+}

@@ -1,0 +1,33 @@
+
+.#{$prefix}-jetpack-post{
+    padding: 15px;
+    .#{$prefix}-desc{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .#{$prefix}-name{
+        margin: 0;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+    .#{$prefix}-position-section{
+        font-size: 18px;
+        color: gray;
+    }
+    .#{$prefix}-social-icons{
+        justify-content: center;
+        li{
+            padding-top: 15px;
+        }
+    }
+   .#{$prefix}-site-url{
+       padding-top: 15px;
+       a{
+           text-decoration: underline;
+       }
+   }
+    
+}

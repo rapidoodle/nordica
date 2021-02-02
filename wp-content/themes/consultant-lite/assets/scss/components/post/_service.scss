@@ -1,0 +1,48 @@
+.#{$prefix}-service{
+    // background-color: $color_light_gray;
+    text-align: center;
+    position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    @include transition();
+    &.#{$prefix}-service-with-image{
+        padding: 15px;
+    }
+    &.#{$prefix}-service-with-icon{
+        padding: 45px 15px 15px;
+    }
+    &:hover{
+        box-shadow: 0 10px 10px $color_blue_gray ;
+        .#{$prefix}-icon{
+            background-color: $color_hover;
+            color: $color_white;
+        }
+    }
+    .#{$prefix}-icon{
+        font-size: 35px;
+        position: absolute;
+        top: -30px;
+        height: 60px;
+        width: 60px;
+        background-color: $color_white;
+        left: 50%;
+        @include transform(translateX(-50%));
+        border-radius: 100%;
+        line-height: 56px;
+        text-align: center;
+        @extend %primary-color;
+        @include border(2px,solid);
+        border-color: $color_light_gray;
+        @include transition();
+    }
+    .#{$prefix}-image-section{
+        height: 250px;
+    }
+    p,
+    .#{$prefix}-post-title,
+    .#{$prefix}-btn-section{
+        margin-top: 15px;
+        margin-bottom: 0;
+        
+    }
+}

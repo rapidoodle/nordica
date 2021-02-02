@@ -1,0 +1,31 @@
+.#{$prefix}-google-map-section{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    .wpgmp_map_parent{
+        margin-bottom: 0;
+    }
+    .#{$prefix}-address-with-social-section{
+        padding-top: 45px;
+        padding-bottom: 45px;
+        @include media(md){
+            padding-top: 87px;
+            padding-bottom: 87px;
+        }
+      
+        .#{$prefix}-telephone,
+        .#{$prefix}-email{
+            margin-top: 15px;
+        }
+        .#{$prefix}-contact-social-section{
+            ul{
+                justify-content: center;
+            }
+            li{
+                padding-top: 15px;
+            }
+        }
+    }
+
+}

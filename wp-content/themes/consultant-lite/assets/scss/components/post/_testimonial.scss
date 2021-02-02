@@ -1,0 +1,80 @@
+.#{$prefix}-testimonial{
+    .#{$prefix}-image-section{
+        padding-top: 30px;
+        .bg-image{
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+            margin: auto;
+            @include transition(all,0.5s,linear);
+            &:hover{
+                border-radius: 0;
+            }
+        }
+        .#{$prefix}-overlay-image-hover{
+            &:before{
+                content: none;
+                @include animation( scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both);
+            }
+            &:hover{
+                &:before{
+                    content: '';
+                    @include animation(scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+                }
+            }
+        }
+    }
+    .#{$prefix}-desc{
+        .#{$prefix}-post-title,
+        .#{$prefix}-site-url{
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        .#{$prefix}-post-author-detail{
+            .#{$prefix}-author-position,
+            .#{$prefix}-author-work-place{
+                font-size: 16px;
+            }
+        }
+        .#{$prefix}-site-url{
+            a{
+                text-decoration: underline;
+            }
+        }
+        .#{$prefix}-caption{
+            padding: 15px 15px 0;
+            p{
+                margin-top: 15px;
+                margin-bottom: 0;
+            }
+        }
+        .#{$prefix}-icon-section{
+            font-size: 30px;
+            padding-top: 15px;
+            @extend %primary-color;
+            position: relative;
+            height: 40px;
+            .#{$prefix}-wrapper{
+                @include transform( rotate(180deg));
+                position: absolute;
+                left: 0;
+            }
+        }
+        .#{$prefix}-btn-section{
+            padding-top: 30px;
+        }
+        .#{$prefix}-readmore-btn{
+           border-color: $color_white;
+           &:hover{
+               border-color: transparent;
+           }
+        }
+        .#{$prefix}-social-icons{
+            justify-content: center;
+            li{
+                padding-top: 15px;
+            }
+        }
+    }
+   
+}

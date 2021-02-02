@@ -1,0 +1,15 @@
+.#{$prefix}-article-post{
+    pre{
+        &.wp-block-verse,
+        &.wp-block-preformatted{
+            font-size: 1rem;
+            font-family: inherit;
+            padding: 20px;
+            margin-bottom: 0;
+            margin-top: 15px;
+            white-space: pre-line;
+            text-align: justify;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.#{$prefix}-blog{
+    .#{$prefix}-image-section{
+        position: relative;
+        height: 300px;
+        a{
+            height: 100%;
+        }
+        .#{$prefix}-date{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    .#{$prefix}-desc{
+        padding: 0 15px 15px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        .#{$prefix}-post-title,
+        p{
+            margin: 0;
+            padding-top: 15px;
+        }
+    }
+}

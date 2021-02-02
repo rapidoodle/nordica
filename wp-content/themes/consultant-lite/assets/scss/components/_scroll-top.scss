@@ -1,0 +1,38 @@
+.#{$prefix}-scroll-top{
+    display: none;
+    @include media(sm){
+       position: fixed;
+       z-index: 3;
+       right: -200px;
+       display: block;
+   }
+   &.show{
+       right: 15px;
+       @include media(lg){
+           right: 30px;
+       }
+   }
+   span{
+       @extend %primary-bg;
+       color: $color_primary_bg_text_color;
+       @include border(2px,solid);
+       @extend %primary-border;
+       display: inline-block;
+       height: 40px;
+       width: 40px;
+       text-align: center;
+       line-height: 40px;
+       font-size: 20px;
+       cursor: pointer;
+       @include transition();
+       i{
+           font-weight: $font_bold;
+       }
+       &:hover{
+           background-color: $color_white;
+           color: $color_primary;
+       }
+      
+   }
+
+}

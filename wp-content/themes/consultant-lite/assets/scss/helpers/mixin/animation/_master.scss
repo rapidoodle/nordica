@@ -1,0 +1,10 @@
+@import 'slide';
+@import 'flip';
+@import 'scale';
+@import 'rotate';
+@mixin animation($animation){
+    -webkit-animation:$animation;
+    -o-animation:$animation;
+    -moz-animation:$animation;
+    animation:$animation;
+}

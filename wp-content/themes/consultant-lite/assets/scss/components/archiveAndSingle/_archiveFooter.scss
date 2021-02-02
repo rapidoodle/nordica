@@ -1,0 +1,45 @@
+
+.#{$prefix}-article-post{
+    .entry-footer{
+        background-color: $color_black;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 10px 30px 15px;
+        text-align: center;
+        margin-top: 30px;
+        color: $color_white;
+        a,
+        .#{$prefix}-icon,
+        .#{$prefix}-caption{
+            padding-top: 5px;
+        }
+        span{
+            display: inline-block;
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+        a{
+            display: inline-block;
+            @include border-bottom(2px,solid);
+            @extend %primary-border;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+            color: $color_white;
+            &:active{
+                color: $color_white;
+            }
+            &:hover{
+                color: $color_hover;
+            }
+        }
+        .#{$prefix}-icon{
+            margin: 0 2.5px;
+            padding: 0;
+            display: inline-block;
+        }
+        .#{$prefix}-caption{
+            font-size: 0.9rem;
+        }
+        
+    }
+}

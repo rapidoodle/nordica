@@ -1,0 +1,44 @@
+
+.#{$prefix}-section-title-with-dashed,
+.#{$prefix}-post-title-with-dashed{
+    text-align: center;
+    span{
+        position: relative;
+        display: inline-block;
+        padding: 0 15px 10px;
+        @include border-bottom(2px,dotted);
+        border-color: $color_blue_gray;
+        @include media(lg){
+            padding: 0 30px 10px;
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 6px;
+            @extend %primary-bg;
+            bottom: -3px;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+}
+.site-content{
+    .widget-title,
+    .entry-title,
+    .page-title{
+        position: relative;
+        @include border-bottom(2px,dotted);
+        border-color: $color_blue_gray;
+        padding-bottom: 15px;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 6px;
+            @extend %primary-bg;
+            bottom: -3px;
+            left: 0;
+        }
+    }
+}

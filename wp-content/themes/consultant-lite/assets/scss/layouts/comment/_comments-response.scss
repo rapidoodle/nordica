@@ -1,0 +1,91 @@
+
+.#{$prefix}-comments-section{
+    .comment-respond{
+        .comment-reply-title{
+            font-size: 22px;
+            padding-top: 15px;;
+            margin: 0;
+        }
+        p{
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        
+        .comment-form{
+            display: flex;
+            flex-wrap: wrap;
+            .logged-in-as{
+                margin-top: 0;
+                a{
+                    margin-top: 15px;
+                }
+            }
+            p{
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include media(sm){
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    padding-right: 10px;
+                }
+                &.comment-notes,
+                &.comment-form-comment,
+                &.comment-form-cookies-consent,
+                &.form-submit,
+                &.logged-in-as{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+
+            label{
+                display: block;
+                margin-bottom: 15px;
+            }
+           
+            .comment-form-cookies-consent{
+              
+                label{
+                    display: inline-block;
+                    padding-left: 10px;
+                    margin-bottom: 0;
+                    text-align: justify;
+                }
+            }
+            .logged-in-as{
+                color: transparent;
+                a{
+                    @extend %comment-btn;
+                    @extend %primary-bg;
+                    @include transition();
+                    width: 100%;
+                    text-align: center;
+                    color: $color_white;
+                    @extend %btn-hover; //placeholder
+                    @extend %perspective;
+                    &:after{
+                        @include animation(  scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both );
+                    }
+                    &:hover{
+                        color: $color_white;
+                        &:after{
+                            @include animation( scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both );
+                        }
+                    }
+                    @include media(sm){
+                        margin-right: 10px;
+                        width: initial;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                        background-color: transparent;
+                        @extend %primary-color;
+                        @include border(2px,solid);
+                        @extend %primary-border;
+                    }
+    
+                }
+            }
+        }
+    }
+}

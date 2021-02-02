@@ -1,0 +1,47 @@
+body{
+    font-size: $root_font_size;
+    font-family: $root_font;
+    font-weight: $font_normal;
+    color: $color_black;
+    background-color: $color_white;
+}
+h2,h3,h4,h5,
+.#{$prefix}-font-semi-bold{
+    font-weight: $font_semi_bold;
+}
+.#{$prefix}-font-bold{
+    font-weight: $font_bold;
+}
+.#{$prefix}-post-title{
+    line-height: 1.25;
+    a{
+        @include line-limit();
+    }
+}
+h1,
+.entry-title,   
+.#{$prefix}-post-title-xl{
+    font-size: 28px;
+    line-height: 1;
+    @include media(sm){
+        font-size: 35px;
+    }
+}
+
+.#{$prefix}-section-title{
+    font-size: 30px;
+    font-weight: $font_semi_bold;
+}
+.#{$prefix}-post-title{
+    font-size: 22px;
+}
+.#{$prefix}-post-title-sm{
+    font-size: 18px;
+}
+.#{$prefix}-post-title-md,
+.widget-title{
+    font-size: 24px;
+}
+.#{$prefix}-post-title-lg{
+    font-size: 26px;
+}

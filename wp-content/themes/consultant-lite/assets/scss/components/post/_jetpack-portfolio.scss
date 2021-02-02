@@ -1,0 +1,33 @@
+.#{$prefix}-jetpack-portfolio-post{
+    padding: 15px;
+    .#{$prefix}-section-title{
+        margin: 0;
+    }
+    .#{$prefix}-desc{
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+   table{
+     border: 1px solid rgba($color_dark_gray,0.24);
+     border-spacing: 0;
+     margin-top: 15px;
+     tr{
+         &:first-child{
+             td{
+                 border-top: 0;
+             }
+         }
+     }
+     td{
+         border-top: 1px solid rgba($color_dark_gray,0.24);
+         padding: 10px;
+         &:first-child{
+            background-color: $color_light_gray;
+            font-size: 14px;
+            font-weight: $font_bold;
+         }
+     }
+   }
+   
+}

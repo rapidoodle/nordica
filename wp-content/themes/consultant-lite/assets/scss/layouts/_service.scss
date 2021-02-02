@@ -1,0 +1,19 @@
+.#{$prefix}-service-section{
+    padding: 15px 0 45px 0px;
+    .#{$prefix}-section-title{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .#{$prefix}-service-list{
+        .#{$prefix}-service{
+            margin-top: 45px;
+            @include transition();
+            &:hover{
+                @include transform(translateY(-15px));
+            }
+            &.#{$prefix}-service-with-icon{
+                margin-top: 60px;
+            }
+        }
+    }
+}
